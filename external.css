@@ -1,3 +1,15 @@
+label{
+    color: rgb(100, 237, 100); font-size: x-large; !important;
+}
 body{
-    background-color: blueviolet;
+    background-color: darkkhaki;!important;
+} 
+#checkbox{
+    color: deeppink; !important;
+}
+.redcolor{
+    color:red ;!important;
+}
+.fontType{
+    font: size 40px;
 }
