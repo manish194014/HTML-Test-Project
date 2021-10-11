@@ -10,7 +10,7 @@
     label{
     /*color: rgb(161, 235, 42);*/ font-size:40px;
     }
-  </style>
+  </style>---
 </head>
 <body>
   <h1> Backtracking</h1>
@@ -36,6 +36,27 @@
   <li>At B, your options are E and F. Try E.</li>
   <li>E is good. Congratulations!</li>
 </ol>
+<p>In this example we drew a picture of a tree. The tree is an abstract model of the possible sequences of choices we could make. There is also a data structure called a tree, but usually we don't have a data structure to tell us what choices we have. (If we do have an actual tree data structure, backtracking on it is called depth-first tree searching.)
+</p>
+<h3>The backtracking algorithm.</h3>
+<p>Here is the algorithm (in pseudocode) for doing backtracking from a given node n:</p>
+<pre>
+  boolean solve(Node n) {
+    if n is a leaf node {
+        if the leaf is a goal node, return true
+        else return false
+    } else {
+        for each child c of n {
+            if solve(c) succeeds, return true
+        }
+        return false
+    }
+}
+</pre>
+<p>Notice that the algorithm is expressed as a boolean function. This is essential to understanding the algorithm. If solve(n) is true, that means node n is part of a solution--that is, node n is one of the nodes on a path from the root to some goal node. We say that n is solvable. If solve(n) is false, then there is no path that includes n to any goal node.</p>
+
+
+
   <table border="1px" cellpadding="10px" cellspacing="5px" align="center">
   <thead>
     <tr align="center">
